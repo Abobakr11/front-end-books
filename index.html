@@ -94,6 +94,258 @@ pre {
   <p>يشرح هذا الدرس كيفية إضافة فقرات نصية باستخدام <code>&lt;p&gt;</code>.</p>
 </div>
 
+<!-- ===== JavaScript لملء الأكواد ===== -->
+<script>
+const codes = {
+  show1: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>تعليقات HTML</title>
+  </head>
+  <body>
+    <!-- هذا تعليق داخل الجسم -->
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show2: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML أساسي</title>
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show3: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML مع ميتا و CSS و JS</title>
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show4: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>العناوين في HTML</title>
+  </head>
+  <body>
+    <h1>عنوان h1</h1>
+    <h2>عنوان h2</h2>
+    <h3>عنوان h3</h3>
+    <h4>عنوان h4</h4>
+    <h5>عنوان h5</h5>
+    <h6>عنوان h6</h6>
+  </body>
+</html>`,
+
+  show5: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>الفقرات في HTML</title>
+  </head>
+  <body>
+    <p>فقرة أولى</p>
+    <p>فقرة ثانية</p>
+    <p>فقرة ثالثة</p>
+  </body>
+</html>`
+};
+
+// ملء كل <pre> بالكود مرة واحدة فقط
+for (const id in codes) {
+  const pre = document.getElementById(id);
+  if(pre) pre.textContent = codes[id];
+}
+</script>
+
+</body>
+</html></style>
+</head>
+<body>
+
+<!-- ===== الفهرس ===== -->
+<table class="toc">
+<tr><td><a href="#lesson1">الدرس الأول</a></td></tr>
+<tr><td><a href="#lesson2">الدرس التاني</a></td></tr>
+<tr><td><a href="#lesson3">الدرس التالت</a></td></tr>
+<tr><td><a href="#lesson4">الدرس الرابع</a></td></tr>
+<tr><td><a href="#lesson5">الدرس الخامس</a></td></tr>
+</table>
+
+<!-- ===== الدروس ===== -->
+<div id="lesson1">
+  <h2>الدرس الأول: التعليقات في HTML</h2>
+  <div class="codes"><pre id="show1"></pre></div>
+  <p>في هذا الدرس نتعلم التعليقات في HTML.</p>
+  <p>التعليقات تبدأ بـ <code>&lt;!--</code> وتنتهي بـ <code>--&gt;</code>.</p>
+</div>
+
+<div id="lesson2">
+  <h2>الدرس الثاني: مستند HTML أساسي</h2>
+  <div class="codes"><pre id="show2"></pre></div>
+  <p>هذا الدرس يوضح الهيكل الأساسي لأي صفحة HTML.</p>
+  <p>يتضمن تعريف نوع المستند <code>&lt;!DOCTYPE html&gt;</code>، الرأس <code>&lt;head&gt;</code>، والعنوان <code>&lt;title&gt;</code>.</p>
+</div>
+
+<div id="lesson3">
+  <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
+  <div class="codes"><pre id="show3"></pre></div>
+  <p>يوضح هذا الدرس مكان إضافة أكواد CSS و JavaScript وروابط خارجية.</p>
+</div>
+
+<div id="lesson4">
+  <h2>الدرس الرابع: العناوين في HTML</h2>
+  <div class="codes"><pre id="show4"></pre></div>
+  <p>يشرح هذا الدرس كيفية استخدام وسوم العناوين من <code>&lt;h1&gt;</code> إلى <code>&lt;h6&gt;</code>.</p>
+</div>
+
+<div id="lesson5">
+  <h2>الدرس الخامس: الفقرات في HTML</h2>
+  <div class="codes"><pre id="show5"></pre></div>
+  <p>يشرح هذا الدرس كيفية إضافة فقرات نصية باستخدام <code>&lt;p&gt;</code>.</p>
+</div>
+
+<!-- ===== JavaScript لملء الأكواد ===== -->
+<script>
+const codes = {
+  show1: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>تعليقات HTML</title>
+  </head>
+  <body>
+    <!-- هذا تعليق داخل الجسم -->
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show2: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML أساسي</title>
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show3: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML مع ميتا و CSS و JS</title>
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show4: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>العناوين في HTML</title>
+  </head>
+  <body>
+    <h1>عنوان h1</h1>
+    <h2>عنوان h2</h2>
+    <h3>عنوان h3</h3>
+    <h4>عنوان h4</h4>
+    <h5>عنوان h5</h5>
+    <h6>عنوان h6</h6>
+  </body>
+</html>`,
+
+  show5: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>الفقرات في HTML</title>
+  </head>
+  <body>
+    <p>فقرة أولى</p>
+    <p>فقرة ثانية</p>
+    <p>فقرة ثالثة</p>
+  </body>
+</html>`
+};
+
+// ملء كل <pre> بالكود مرة واحدة فقط
+for (const id in codes) {
+  const pre = document.getElementById(id);
+  if(pre) pre.textContent = codes[id];
+}
+</script>
+
+</body>
+</html>.codes {
+  background: #282C34;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+pre {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== الفهرس ===== -->
+<table class="toc">
+<tr><td><a href="#lesson1">الدرس الأول</a></td></tr>
+<tr><td><a href="#lesson2">الدرس التاني</a></td></tr>
+<tr><td><a href="#lesson3">الدرس التالت</a></td></tr>
+<tr><td><a href="#lesson4">الدرس الرابع</a></td></tr>
+<tr><td><a href="#lesson5">الدرس الخامس</a></td></tr>
+</table>
+
+<!-- ===== الدروس ===== -->
+<div id="lesson1">
+  <h2>الدرس الأول: التعليقات في HTML</h2>
+  <div class="codes"><pre id="show1"></pre></div>
+  <p>في هذا الدرس نتعلم التعليقات في HTML.</p>
+  <p>التعليقات تبدأ بـ <code>&lt;!--</code> وتنتهي بـ <code>--&gt;</code>.</p>
+</div>
+
+<div id="lesson2">
+  <h2>الدرس الثاني: مستند HTML أساسي</h2>
+  <div class="codes"><pre id="show2"></pre></div>
+  <p>هذا الدرس يوضح الهيكل الأساسي لأي صفحة HTML.</p>
+  <p>يتضمن تعريف نوع المستند <code>&lt;!DOCTYPE html&gt;</code>، الرأس <code>&lt;head&gt;</code>، والعنوان <code>&lt;title&gt;</code>.</p>
+</div>
+
+<div id="lesson3">
+  <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
+  <div class="codes"><pre id="show3"></pre></div>
+  <p>يوضح هذا الدرس مكان إضافة أكواد CSS و JavaScript وروابط خارجية.</p>
+</div>
+
+<div id="lesson4">
+  <h2>الدرس الرابع: العناوين في HTML</h2>
+  <div class="codes"><pre id="show4"></pre></div>
+  <p>يشرح هذا الدرس كيفية استخدام وسوم العناوين من <code>&lt;h1&gt;</code> إلى <code>&lt;h6&gt;</code>.</p>
+</div>
+
+<div id="lesson5">
+  <h2>الدرس الخامس: الفقرات في HTML</h2>
+  <div class="codes"><pre id="show5"></pre></div>
+  <p>يشرح هذا الدرس كيفية إضافة فقرات نصية باستخدام <code>&lt;p&gt;</code>.</p>
+</div>
+
 <!-- ===== JavaScript لملء الأكواد بدون تكرار العناوين ===== -->
 <script>
 const codes = {
