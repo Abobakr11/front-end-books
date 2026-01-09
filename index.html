@@ -166,24 +166,6 @@ const codes = {
 for (const id in codes) {
   document.getElementById(id).textContent = codes[id];
 }
-</script>
-
-</body>
-</html><div id="lesson3">
-  <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
-  <div class="codes"><pre id="show3"></pre></div>
-</div>
-
-<div id="lesson4">
-  <h2>الدرس الرابع: العناوين في HTML</h2>
-  <div class="codes"><pre id="show4"></pre></div>
-</div>
-
-<div id="lesson5">
-  <h2>الدرس الخامس: الفقرات في HTML</h2>
-  <div class="codes"><pre id="show5"></pre></div>
-</div>
-
 <script>
 const codes = {
   show1: `<!DOCTYPE html>
@@ -196,7 +178,6 @@ const codes = {
     هذا نص يظهر على الصفحة
   </body>
 </html>`,
-
   show2: `<!DOCTYPE html>
 <html>
   <head>
@@ -206,21 +187,16 @@ const codes = {
     هذا نص يظهر على الصفحة
   </body>
 </html>`,
-
   show3: `<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>HTML مع ميتا و CSS و JS</title>
-    <style></style>
-    <script></script>
-    <link rel="stylesheet" href="">
   </head>
   <body>
     هذا نص يظهر على الصفحة
   </body>
 </html>`,
-
   show4: `<!DOCTYPE html>
 <html>
   <head>
@@ -236,7 +212,6 @@ const codes = {
     <h6>عنوان h6</h6>
   </body>
 </html>`,
-
   show5: `<!DOCTYPE html>
 <html>
   <head>
@@ -251,9 +226,9 @@ const codes = {
 </html>`
 };
 
-// املأ كل <pre> بالكود
 for (const id in codes) {
-  document.getElementById(id).textContent = codes[id];
+  const pre = document.getElementById(id);
+  if(pre) pre.textContent = codes[id];
 }
 </script>
 
