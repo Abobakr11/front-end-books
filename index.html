@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-<meta name="description" content="ده موقع بيعلم فيه كل أكواد html" />
-<title>شرح أكواد HTML</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style> 
+<meta name="description" content="ده موقع بيعلم فيه كل أكواد HTML">
+<title>شرح أكواد HTML</title>
+<style>
 html {
     direction: ltr;
     scrollbar-gutter: stable;
 }
-
 body {
     direction: rtl;
     background-color: #FAFAFA;
@@ -19,10 +18,8 @@ body {
     margin: 20px;
     line-height: 1.6;
     overflow-y: auto;
-    height: 100%;
     box-sizing: border-box;
 }
-
 h1, h2 {
     font-family: "Diwani Jali", "Diwani Letter", "Traditional Arabic", Arial, sans-serif;
     font-size: 2rem;
@@ -30,35 +27,159 @@ h1, h2 {
     margin-bottom: 1rem;
     text-align: center;
 }
-
-nav, .nav-links {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    gap: 10px;
-}
-
-nav a, .nav-links a {
-    flex: 1;
-}
-
-nav a img, .nav-links a img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
-
-img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-}
-
 table.toc {
     width: 100%;
+    border-spacing: 10px 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: 0;
+}
+table.toc td {
+    text-align: right;
+    font-size: 1.1rem;
+}
+pre {
+    font-family: monospace;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    text-align: right;
+    margin: 0 10px 20px 10px;
+}
+.codes {
+    background: #282C34;
+    color: white;
+    white-space: pre-wrap;
+    font-family: monospace;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+</style>
+</head>
+<body>
+
+<table class="toc">
+<tr><td><a href="#lesson1">الدرس الأول</a></td></tr>
+<tr><td><a href="#lesson2">الدرس التاني</a></td></tr>
+<tr><td><a href="#lesson3">الدرس التالت</a></td></tr>
+<tr><td><a href="#lesson4">الدرس الرابع</a></td></tr>
+<tr><td><a href="#lesson5">الدرس الخامس</a></td></tr>
+</table>
+
+<!-- ===== الدرس الأول ===== -->
+<div id="lesson1">
+  <h2>الدرس الأول: التعليقات في HTML</h2>
+  <div class="codes"><pre id="show1"></pre></div>
+  <div>
+    <p>في هذا الدرس نتعلم التعليقات في HTML.</p>
+    <p>التعليقات تبدأ بـ <code>&lt;!--</code> وتنتهي بـ <code>--&gt;</code>.</p>
+  </div>
+</div>
+
+<!-- ===== الدرس الثاني ===== -->
+<div id="lesson2">
+  <h2>الدرس الثاني: مستند HTML أساسي</h2>
+  <div class="codes"><pre id="show2"></pre></div>
+  <div>
+    <p>هذا الدرس يوضح الهيكل الأساسي لأي صفحة HTML.</p>
+  </div>
+</div>
+
+<!-- ===== الدرس الثالث ===== -->
+<div id="lesson3">
+  <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
+  <div class="codes"><pre id="show3"></pre></div>
+</div>
+
+<!-- ===== الدرس الرابع ===== -->
+<div id="lesson4">
+  <h2>الدرس الرابع: العناوين في HTML</h2>
+  <div class="codes"><pre id="show4"></pre></div>
+</div>
+
+<!-- ===== الدرس الخامس ===== -->
+<div id="lesson5">
+  <h2>الدرس الخامس: الفقرات في HTML</h2>
+  <div class="codes"><pre id="show5"></pre></div>
+</div>
+
+<!-- ===== JavaScript لملء الأكواد ===== -->
+<script>
+const codes = {
+  show1: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>تعليقات HTML</title>
+  </head>
+  <body>
+    <!-- هذا تعليق داخل الجسم -->
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show2: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML أساسي</title>
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show3: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML مع ميتا و CSS و JS</title>
+    <style></style>
+    <script></script>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show4: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>العناوين في HTML</title>
+  </head>
+  <body>
+    <h1>عنوان h1</h1>
+    <h2>عنوان h2</h2>
+    <h3>عنوان h3</h3>
+    <h4>عنوان h4</h4>
+    <h5>عنوان h5</h5>
+    <h6>عنوان h6</h6>
+  </body>
+</html>`,
+
+  show5: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>الفقرات في HTML</title>
+  </head>
+  <body>
+    <p>فقرة أولى</p>
+    <p>فقرة ثانية</p>
+    <p>فقرة ثالثة</p>
+  </body>
+</html>`
+};
+
+// ملء كل <pre> بالأكواد
+for (const id in codes) {
+  const pre = document.getElementById(id);
+  if(pre) pre.textContent = codes[id];
+}
+</script>
+
+</body>
+</html>    width: 100%;
     border-spacing: 10px 0;
     margin-bottom: 20px;
     margin-left: auto;
@@ -207,6 +328,5 @@ document.getElementById("show4").textContent = "<!DOCTYPE html>\n<html>\n  <head
 
 document.getElementById("show5").textContent = "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>الفقرات في HTML</title>\n  </head>\n  <body>\n    <p>فقرة أولى</p>\n    <p>فقرة ثانية</p>\n    <p>فقرة ثالثة</p>\n  </body>\n</html>";
 </script>
-
 </body>
-</html>​​
+</html>
