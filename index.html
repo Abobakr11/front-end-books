@@ -3,38 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ده موقع بيعلم فيه كل أكواد HTML">
 <title>شرح أكواد HTML</title>
 <style>
-html {
-    direction: ltr;
-    scrollbar-gutter: stable;
+body { font-family: Arial, sans-serif; background: #FAFAFA; color: #000; margin: 20px; }
+h2 { text-align: center; font-size: 1.8rem; margin-bottom: 10px; }
+.codes { background: #282C34; color: white; padding: 12px; border-radius: 6px; font-family: monospace; white-space: pre-wrap; overflow-x: auto; margin-bottom: 20px; }
+pre { margin: 0; }
+table.toc td { text-align: right; font-size: 1.1rem; padding: 5px 0; }
+table.toc a { text-decoration: none; color: #000; }
+</style>
+</head>
+<body>
+
+<table class="toc">
+<tr><td><a href="#lesson1">الدرس الأول</a></td></tr>
+<tr><td><a href="#lesson2">الدرس التاني</a></td></tr>
+<tr><td><a href="#lesson3">الدرس التالت</a></td></tr>
+<tr><td><a href="#lesson4">الدرس الرابع</a></td></tr>
+<tr><td><a href="#lesson5">الدرس الخامس</a></td></tr>
+</table>
+
+<!-- الدروس -->
+<div id="lesson1">
+  <h2>الدرس الأول: التعليقات في HTML</h2>
+  <div class="codes"><pre id="show1"></pre></div>
+</div>
+
+<div id="lesson2">
+  <h2>الدرس الثاني: مستند HTML أساسي</h2>
+  <div class="codes"><pre id="show2"></pre></div>
+</div>
+
+<div id="lesson3">
+  <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
+  <div class="codes"><pre id="show3"></pre></div>
+</div>
+
+<div id="lesson4">
+  <h2>الدرس الرابع: العناوين في HTML</h2>
+  <div class="codes"><pre id="show4"></pre></div>
+</div>
+
+<div id="lesson5">
+  <h2>الدرس الخامس: الفقرات في HTML</h2>
+  <div class="codes"><pre id="show5"></pre></div>
+</div>
+
+<script>
+const codes = {
+  show1: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>تعليقات HTML</title>
+  </head>
+  <body>
+    <!-- هذا تعليق داخل الجسم -->
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show2: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML أساسي</title>
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show3: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HTML مع ميتا و CSS و JS</title>
+    <style></style>
+    <script></script>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+  show4: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>العناوين في HTML</title>
+  </head>
+  <body>
+    <h1>عنوان h1</h1>
+    <h2>عنوان h2</h2>
+    <h3>عنوان h3</h3>
+    <h4>عنوان h4</h4>
+    <h5>عنوان h5</h5>
+    <h6>عنوان h6</h6>
+  </body>
+</html>`,
+
+  show5: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>الفقرات في HTML</title>
+  </head>
+  <body>
+    <p>فقرة أولى</p>
+    <p>فقرة ثانية</p>
+    <p>فقرة ثالثة</p>
+  </body>
+</html>`
+};
+
+// املأ كل <pre> بالكود
+for (const id in codes) {
+  document.getElementById(id).textContent = codes[id];
 }
-body {
-    direction: rtl;
-    background-color: #FAFAFA;
-    font-family: Arial, sans-serif;
-    color: #000;
-    margin: 20px;
-    line-height: 1.6;
-    overflow-y: auto;
-    box-sizing: border-box;
-}
-h1, h2 {
-    font-family: "Diwani Jali", "Diwani Letter", "Traditional Arabic", Arial, sans-serif;
-    font-size: 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-table.toc {
-    width: 100%;
-    border-spacing: 10px 0;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: 0;
-}
-table.toc td {
+</script>
+
+</body>
+</html>table.toc td {
     text-align: right;
     font-size: 1.1rem;
 }
