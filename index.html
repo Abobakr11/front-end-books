@@ -4,7 +4,6 @@
 <meta name="description" content="ده موقع بيعلم فيه كل أكواد html" />
 <title>شرح أكواد HTML</title>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style> 
 html {
@@ -99,7 +98,7 @@ video {
   max-height: 80vh;
 }
 
-#codes {
+.codes {
     background: #282C34;
     color: white;
     white-space: pre-wrap;
@@ -121,18 +120,17 @@ video {
 <tr><td> <a href="#lesson2">الدرس التاني</a> </td></tr>
 <tr><td> <a href="#lesson3">الدرس التالت</a> </td></tr>
 <tr><td> <a href="#lesson4">الدرس الرابع</a> </td></tr>
+<tr><td> <a href="#lesson5">الدرس الخامس</a> </td></tr>
 </table>
 
 <!-- ===== الدرس الأول: التعليقات HTML ===== -->
 <div id="lesson1">
   <h2>الدرس الأول: التعليقات في HTML</h2>
 
-  <!-- جزء الكود -->
-  <div id="codes">
+  <div class="codes">
     <pre id="show1"></pre>
   </div>
 
-  <!-- جزء الشرح -->
   <div>
     <p>في هذا الدرس نتعلم التعليقات في HTML.</p>
     <p>التعليقات تبدأ بـ <code>&lt;!--</code> وتنتهي بـ <code>--&gt;</code>.</p>
@@ -144,7 +142,7 @@ video {
 <div id="lesson2">
   <h2>الدرس الثاني: مستند HTML أساسي</h2>
 
-  <div id="codes">
+  <div class="codes">
     <pre id="show2"></pre>
   </div>
 
@@ -159,7 +157,7 @@ video {
 <div id="lesson3">
   <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
 
-  <div id="codes">
+  <div class="codes">
     <pre id="show3"></pre>
   </div>
 
@@ -173,7 +171,7 @@ video {
 <div id="lesson4">
   <h2>الدرس الرابع: العناوين في HTML</h2>
 
-  <div id="codes">
+  <div class="codes">
     <pre id="show4"></pre>
   </div>
 
@@ -187,7 +185,7 @@ video {
 <div id="lesson5">
   <h2>الدرس الخامس: الفقرات في HTML</h2>
 
-  <div id="codes">
+  <div class="codes">
     <pre id="show5"></pre>
   </div>
 
@@ -197,7 +195,7 @@ video {
   </div>
 </div>
 
-<!-- ===== JavaScript واحد في آخر الصفحة لملء كل الكود ===== -->
+<!-- ===== JavaScript لملء كل الكود ===== -->
 <script>
 document.getElementById("show1").textContent = `
 <!DOCTYPE html>
