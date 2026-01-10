@@ -1,40 +1,131 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شرح أكواد HTML</title>
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background: #FAFAFA;
-  color: #000;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شرح أكواد HTML</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: #FAFAFA;
+            color: #333;
+            line-height: 1.6;
+        }
 
-h2 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
 
-table.toc {
-  width: 100%;
-  margin-bottom: 20px;
-  border-spacing: 0 5px;
-}
+        /* تنسيق الفهرس */
+        .toc {
+            width: 100%;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .toc td {
+            padding: 5px;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
 
-table.toc td {
-  text-align: right;
-  font-size: 1.1rem;
-}
+        /* تنسيق صندوق الأكواد */
+        .codes {
+            background: #282C34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Consolas', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+            direction: ltr; /* لجعل الكود البرمجي من اليسار لليمين */
+            text-align: left;
+        }
 
-table.toc a {
-  text-decoration: none;
-  color: blue;
-}
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
 
-.codes {
+        .lesson-container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="toc">
+        <table>
+            <tr><td><a href="#lesson1">الدرس الأول: التعليقات</a></td></tr>
+            <tr><td><a href="#lesson2">الدرس الثاني: الهيكل الأساسي</a></td></tr>
+            <tr><td><a href="#lesson3">الدرس الثالث: الميتا والروابط</a></td></tr>
+            <tr><td><a href="#lesson4">الدرس الرابع: العناوين</a></td></tr>
+            <tr><td><a href="#lesson5">الدرس الخامس: الفقرات</a></td></tr>
+        </table>
+    </div>
+
+    <div id="lesson1" class="lesson-container">
+        <h2>الدرس الأول: التعليقات في HTML</h2>
+        <div class="codes"><pre id="show1"></pre></div>
+        <p>في هذا الدرس نتعلم التعليقات. هي ملاحظات للمبرمج ولا تظهر للمستخدم.</p>
+    </div>
+
+    <div id="lesson2" class="lesson-container">
+        <h2>الدرس الثاني: مستند HTML أساسي</h2>
+        <div class="codes"><pre id="show2"></pre></div>
+        <p>يوضح الهيكل الأساسي الذي تبدأ به أي صفحة ويب.</p>
+    </div>
+
+    <div id="lesson3" class="lesson-container">
+        <h2>الدرس الثالث: الميتا و CSS و JS</h2>
+        <div class="codes"><pre id="show3"></pre></div>
+        <p>إضافة التنسيقات والسكربتات في رأس الصفحة.</p>
+    </div>
+
+    <div id="lesson4" class="lesson-container">
+        <h2>الدرس الرابع: العناوين (Headings)</h2>
+        <div class="codes"><pre id="show4"></pre></div>
+        <p>استخدام العناوين من h1 الأكبر إلى h6 الأصغر.</p>
+    </div>
+
+    <div id="lesson5" class="lesson-container">
+        <h2>الدرس الخامس: الفقرات (Paragraphs)</h2>
+        <div class="codes"><pre id="show5"></pre></div>
+        <p>استخدام وسم p لكتابة النصوص الطويلة.</p>
+    </div>
+
+    <script>
+        const codeData = {
+            show1: `\n<p>هذا نص عادي</p>`,
+            show2: `<!DOCTYPE html>\n<html>\n  <head>\n    <title>عنوان الصفحة</title>\n  </head>\n  <body>\n    محتوى الصفحة هنا\n  </body>\n</html>`,
+            show3: `<html>\n  <head>\n    <meta charset="UTF-8">\n    <link rel="stylesheet" href="style.css">\n    <script src="script.js"><\/script>\n  </head>\n</html>`,
+            show4: `<h1>عنوان رئيسي</h1>\n<h2>عنوان فرعي</h2>\n<h3>عنوان أصغر</h3>`,
+            show5: `<p>هذه فقرة نصية أولى.</p>\n<p>هذه فقرة نصية ثانية.</p>`
+        };
+
+        for (const id in codeData) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = codeData[id];
+            }
+        }
+    </script>
+
+</body>
+</html>.codes {
   background: #282C34;
   color: #fff;
   padding: 12px;
