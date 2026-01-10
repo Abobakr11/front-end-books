@@ -1,40 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>شرح أكواد HTML</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background: #FAFAFA;
-            color: #333;
-            line-height: 1.6;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شرح أكواد HTML</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #FAFAFA;
+  color: #000;
+}
 
-        h2 {
-            text-align: center;
-            color: #2c3e50;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
 
-        /* تنسيق الفهرس */
-        .toc {
-            width: 100%;
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-        .toc td {
-            padding: 5px;
-        }
-        .toc a {
-            text-decoration: none;
-            color: #007bff;
+table.toc {
+  width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0 5px;
+}
+
+table.toc td {
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+table.toc a {
+  text-decoration: none;
+  color: blue;
+}
+
+.codes {
+  background: #282C34;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  direction: ltr; /* لضمان ظهور الكود من اليسار */
+  text-align: left;
+}
+
+pre {
+  margin: 0;
+}
+</style>
+</head>
+<body>
+
+<table class="toc">
+  <tr><td><a href="#lesson1">الدرس الأول</a></td></tr>
+  <tr><td><a href="#lesson2">الدرس التاني</a></td></tr>
+  <tr><td><a href="#lesson3">الدرس التالت</a></td></tr>
+  <tr><td><a href="#lesson4">الدرس الرابع</a></td></tr>
+  <tr><td><a href="#lesson5">الدرس الخامس</a></td></tr>
+</table>
+
+<div id="lesson1">
+  <h2>الدرس الأول: التعليقات في HTML</h2>
+  <div class="codes"><pre id="show1"></pre></div>
+  <p>في هذا الدرس نتعلم التعليقات في HTML.</p>
+  <p>التعليقات تبدأ بـ <code>&lt;!--</code> وتنتهي بـ <code>--&gt;</code>.</p>
+</div>
+
+<div id="lesson2">
+  <h2>الدرس الثاني: مستند HTML أساسي</h2>
+  <div class="codes"><pre id="show2"></pre></div>
+  <p>هذا الدرس يوضح الهيكل الأساسي لأي صفحة HTML.</p>
+</div>
+
+<div id="lesson3">
+  <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
+  <div class="codes"><pre id="show3"></pre></div>
+  <p>يوضح هذا الدرس مكان إضافة أكواد CSS و JavaScript.</p>
+</div>
+
+<div id="lesson4">
+  <h2>الدرس الرابع: العناوين في HTML</h2>
+  <div class="codes"><pre id="show4"></pre></div>
+  <p>يشرح هذا الدرس كيفية استخدام وسوم العناوين من h1 إلى h6.</p>
+</div>
+
+<div id="lesson5">
+  <h2>الدرس الخامس: الفقرات في HTML</h2>
+  <div class="codes"><pre id="show5"></pre></div>
+  <p>يشرح هذا الدرس كيفية إضافة فقرات نصية باستخدام p.</p>
+</div>
+
+<script>
+const codes = {
+  show1: `<!DOCTYPE html>\n<html>\n  <body>\n    \n  </body>\n</html>`,
+  show2: `<!DOCTYPE html>\n<html>\n  <head>\n    <title>HTML أساسي</title>\n  </head>\n  <body></body>\n</html>`,
+  show3: `<html>\n  <head>\n    <meta charset="UTF-8">\n    <style></style>\n    <script><\/script>\n  </head>\n</html>`,
+  show4: `<h1>عنوان h1</h1>\n<h2>عنوان h2</h2>\n<h3>عنوان h3</h3>`,
+  show5: `<p>فقرة أولى</p>\n<p>فقرة ثانية</p>`
+};
+
+for (const id in codes) {
+  const pre = document.getElementById(id);
+  if(pre) pre.textContent = codes[id];
+}
+</script>
+
+</body>
+</html>            color: #007bff;
             font-weight: bold;
         }
 
