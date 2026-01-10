@@ -57,6 +57,21 @@
       text-align: left;
     }
 
+    /* شرح الدرس (مع عرض الوسوم كـ entities) */
+    .explain {
+      background: #ffffff;
+      color: #111;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 6px;
+      line-height: 1.6;
+      direction: rtl;
+      text-align: right;
+      border: 1px solid #e6e6e6;
+      font-size: 0.98rem;
+      white-space: pre-wrap;
+    }
+
     pre {
       margin: 0;
     }
@@ -75,52 +90,138 @@
 
   <!-- ===== الدروس ===== -->
   <div id="lesson1" class="lesson-container">
-    <h2>الدرس الأول: التعليقات في HTML</h2>
+    <h2>الدرس الأول: مستند HTML أساسي</h2>
+
+    <!-- هنا يحتوي الـ pre على كود HTML كـ نص -->
     <div class="codes"><pre id="show1"></pre></div>
-    <p>في هذا الدرس نتعلم التعليقات في HTML.</p>
-    <p>التعليقات تبدأ بـ <code>&lt;!--</code> وتنتهي بـ <code>--&gt;</code>.</p>
+
+    <!-- الشرح داخل div منفصل — الوسوم مكتوبة كـ entities (&lt; &gt;) -->
+    <div class="explain">
+&lt;!DOCTYPE html&gt;
+- يُعرّف نوع المستند ويخبر المتصفح أننا نستخدم HTML5.
+
+&lt;html lang="ar"&gt; ... &lt;/html&gt;
+- العنصر الجذري للمستند. سمة lang="ar" تُشير إلى أن اللغة عربية.
+
+&lt;head&gt; ... &lt;/head&gt;
+- قسم الميتاداتا: يحتوي &lt;meta&gt;، &lt;title&gt;، وصلات إلى ملفات CSS/JS.
+
+&lt;meta charset="utf-8"&gt;
+- يحدد ترميز الحروف (UTF-8) لعرض النص العربي والرموز بشكل صحيح.
+
+&lt;title&gt;...&lt;/title&gt;
+- عنوان الصفحة الذي يظهر في تبويب المتصفح.
+
+&lt;body&gt; ... &lt;/body&gt;
+- يحتوي المحتوى المرئي للمستخدم (نصوص، صور، أزرار...).
+    </div>
   </div>
 
   <div id="lesson2" class="lesson-container">
-    <h2>الدرس الثاني: مستند HTML أساسي</h2>
+    <h2>الدرس الثاني: التعليقات في HTML</h2>
     <div class="codes"><pre id="show2"></pre></div>
-    <p>هذا الدرس يوضح الهيكل الأساسي لأي صفحة HTML.</p>
+
+    <div class="explain">
+مثال التعليق في HTML:
+&lt;!-- هذا تعليق داخل الجسم --&gt;
+
+- التعليقات لا تظهر في واجهة المستخدم لكنها تبقى في مصدر الصفحة.
+- تُستخدم لترك ملاحظات للمطورين أو تعطيل جزء من الكود مؤقتًا.
+    </div>
   </div>
 
   <div id="lesson3" class="lesson-container">
     <h2>الدرس الثالث: HTML مع ميتا و CSS و JavaScript</h2>
     <div class="codes"><pre id="show3"></pre></div>
-    <p>يوضح هذا الدرس مكان إضافة أكواد CSS و JavaScript وروابط خارجية.</p>
+
+    <div class="explain">
+&lt;meta charset="UTF-8"&gt;
+- يحدد ترميز الصفحة (مهم للنصوص متعددة اللغات).
+
+&lt;link rel="stylesheet" href="style.css"&gt;
+- يربط ملف CSS خارجي لتنسيق الصفحة.
+
+&lt;script src="script.js"&gt;&lt;/script&gt;
+- يضمّن ملف JavaScript خارجي. يتم وضعه عادةً قبل نهاية &lt;/body&gt; أو في &lt;head&gt; حسب الحاجة.
+    </div>
   </div>
 
   <div id="lesson4" class="lesson-container">
     <h2>الدرس الرابع: العناوين في HTML</h2>
     <div class="codes"><pre id="show4"></pre></div>
-    <p>يشرح هذا الدرس كيفية استخدام وسوم العناوين من <code>&lt;h1&gt;</code> إلى <code>&lt;h6&gt;</code>.</p>
+
+    <div class="explain">
+&lt;h1&gt; ... &lt;/h1&gt;
+- عنوان المستوى الأول (الأهم).
+
+&lt;h2&gt; ... &lt;/h2&gt; إلى &lt;h6&gt; ... &lt;/h6&gt;
+- عناوين بمستويات أقل لتنظيم المحتوى.
+- تُستخدم لأغراض دلالية (SEO، سهولة القراءة)، وليس فقط للتنسيق.
+    </div>
   </div>
 
   <div id="lesson5" class="lesson-container">
     <h2>الدرس الخامس: الفقرات في HTML</h2>
     <div class="codes"><pre id="show5"></pre></div>
-    <p>يشرح هذا الدرس كيفية إضافة فقرات نصية باستخدام <code>&lt;p&gt;</code>.</p>
+
+    <div class="explain">
+&lt;p&gt; ... &lt;/p&gt;
+- عنصر الفقرة لاحتواء نص.
+- المتصفح يضيف مسافة (فاصل) قبل ��بعد كل فقرة تلقائيًا.
+- للفواصل السطرية بدون بداية فقرة جديدة استخدم &lt;br&gt;.
+    </div>
   </div>
 
-  <!-- سكربت واحد فقط لملء صناديق الأكواد -->
+  <!-- سكربت آمن يملأ كل صناديق الأكواد بنصوص HTML داخل textContent -->
   <script>
-    (function(){
-      const codes = {
-        show1: `<!DOCTYPE html>\n<html>\n  <head>\n    <title>تعليقات HTML</title>\n  </head>\n  <body>\n    <!-- هذا تعليق داخل الجسم -->\n    هذا نص يظهر على الصفحة\n  </body>\n</html>`,
-        show2: `<!DOCTYPE html>\n<html>\n  <head>\n    <title>HTML أساسي</title>\n  </head>\n  <body>\n    محتوى الصفحة هنا\n  </body>\n</html>`,
-        show3: `<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset="UTF-8">\n    <link rel="stylesheet" href="style.css">\n    <script src="script.js"><\\/script>\n  </head>\n</html>`,
-        show4: `<h1>عنوان h1</h1>\n<h2>عنوان h2</h2>\n<h3>عنوان h3</h3>`,
-        show5: `<p>فقرة أولى</p>\n<p>فقرة ثانية</p>`
-      };
+document.addEventListener('DOMContentLoaded', function () {
+  (function(){
+    const codes = {
+      show1: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML أساسي</title>
+  </head>
+  <body>
+    محتوى الصفحة هنا
+  </body>
+</html>`,
 
-      for (const id in codes) {
-        const pre = document.getElementById(id);
-        if (pre) pre.textContent = codes[id];
-      }
-    })();
+      show2: `<!DOCTYPE html>
+<html>
+  <head>
+    <title>تعليقات HTML</title>
+  </head>
+  <body>
+    <!-- هذا تعليق داخل الجسم -->
+    هذا نص يظهر على الصفحة
+  </body>
+</html>`,
+
+      show3: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"><\/script>
+  </head>
+</html>`,
+
+      show4: `<h1>عنوان h1</h1>
+<h2>عنوان h2</h2>
+<h3>عنوان h3</h3>`,
+
+      show5: `<p>فقرة أولى</p>
+<p>فقرة ثانية</p>`
+    };
+
+    for (const id in codes) {
+      const pre = document.getElementById(id);
+      if (pre) pre.textContent = codes[id]; // use textContent so tags show as text, not HTML
+    }
+  })();
+});
   </script>
 
 </body>
