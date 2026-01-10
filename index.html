@@ -108,7 +108,6 @@
 
 &lt;meta charset="utf-8"&gt;
 - يحدد ترميز الحروف (UTF-8) لعرض النص العربي والرموز بشكل صحيح.
-
 &lt;title&gt;...&lt;/title&gt;
 - عنوان الصفحة الذي يظهر في تبويب المتصفح.
 
@@ -167,7 +166,7 @@
     <div class="explain">
 &lt;p&gt; ... &lt;/p&gt;
 - عنصر الفقرة لاحتواء نص.
-- المتصفح يضيف مسافة (فاصل) قبل ��بعد كل فقرة تلقائيًا.
+- المتصفح يضيف مسافة (فاصل) قبل و بعد كل &lt;p&gt;…&lt;/p&gt; فقرة تلقائيًا.
 - للفواصل السطرية بدون بداية فقرة جديدة استخدم &lt;br&gt;.
     </div>
   </div>
@@ -178,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
   (function(){
     const codes = {
       show1: `<!DOCTYPE html>
-<html>
+<html lang="ar">
   <head>
     <meta charset="utf-8">
     <title>HTML أساسي</title>
